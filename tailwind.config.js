@@ -12,18 +12,6 @@ module.exports = {
       colors: {
         gray: colors.slate,
         'gray-norm': colors.gray,
-        // gray: colors.zinc,
-        // primary: colors.cyan,
-        // primary: colors.lime,
-        // primary: colors.fuchsia,
-        // primary: colors.amber,
-        // primary: colors.emerald,
-        // primary: colors.teal,
-        // primary: colors.violet,
-        // primary: colors.sky,
-        // primary: colors.rose,
-        // secondary: colors.violet,
-        // tertiary: colors.fuchsia,
         primary: {
           900: '#001f26',
           800: '#003640',

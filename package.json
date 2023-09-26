@@ -18,6 +18,7 @@
     "start": "npm run rebuild && npm run dev"
   },
   "devDependencies": {
+    "@parcel/compressor-brotli": "^2.9.3",
     "@parcel/compressor-gzip": "^2.9.3",
     "@parcel/packager-raw-url": "^2.9.3",
     "@parcel/transformer-inline-string": "^2.9.3",

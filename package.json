@@ -10,12 +10,15 @@
   "author": "Phillip Rearick",
   "scripts": {
     "build": "parcel build --target default",
+    "fix": "eslint --fix src --ext .js && stylelint --allow-empty-input \"src/**/*.css\" --fix && prettier src --write",
+    "lint": "eslint src --ext .js && stylelint --allow-empty-input \"src/**/*.css\" && prettier src --check",
     "deploy": "gh-pages -d dist",
     "dev": "parcel --target default",
     "predeploy": "npm run rebuild",
     "rebuild": "npm run reset && npm run build",
     "reset": "rm -rf .parcel-cache && rm -rf dist",
-    "start": "npm run rebuild && npm run dev"
+    "start": "npm run rebuild && npm run dev",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@parcel/compressor-brotli": "^2.9.3",
@@ -26,11 +29,21 @@
     "autoprefixer": "^10.4.15",
     "buffer": "^6.0.3",
     "cssnano": "^6.0.1",
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "gh-pages": "^6.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.0.2",
     "parcel": "^2.9.3",
     "parcel-reporter-static-files-copy": "^1.5.2",
     "postcss": "^8.4.29",
+    "prettier": "3.0.3",
     "sharp": "^0.31.3",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
     "tailwindcss": "^3.3.3"
   },
   "repository": {
@@ -46,8 +59,6 @@
     }
   },
   "dependencies": {
-    "acorn": "^8.10.0",
-    "acorn-walk": "^8.2.0",
     "fontfaceobserver": "^2.3.0"
   }
 }
